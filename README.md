@@ -11,21 +11,21 @@ Instead of writing YAML or JSON (like in raw CloudFormation), you write infrastr
 - Go
 
 # Example: Create an S3 Bucket using Python AWS CDK
-## Step 1: Install CDK
+### Step 1: Install CDK
 `npm install -g aws-cdk`
 
-## Step 2: Create CDK Project
+### Step 2: Create CDK Project
 ```
 cdk init app --language python
 ```
 
-## Step 3: Install Dependencies
+### Step 3: Install Dependencies
 ```
 source .venv/bin/activate
 pip install aws-cdk.aws-s3
 ```
 
-## Step 4: Edit my_cdk_stack.py
+### Step 4: Edit my_cdk_stack.py
 ```
 from aws_cdk import (
     Stack,
@@ -43,7 +43,7 @@ def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         public_read_access=False
     )
 ```
-## Step 5: Deploy
+### Step 5: Deploy
 ```
 cdk synth     # Shows generated CloudFormation
 cdk deploy    # Provisions resources
